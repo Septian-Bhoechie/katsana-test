@@ -17,10 +17,10 @@
         @forelse ($data as $trip)
             <tr>
                 <td>
-                    {{ $trip->start->tracker_at }}
+                    {{ $trip->start->tracker_at->format('dS F, Y h:ia') }}
                 </td>
                 <td>
-                    {{ $trip->end->tracker_at }}
+                    {{ $trip->end->tracker_at->format('dS F, Y h:ia') }}
                 </td>
                 <td>
                     {{ $trip->end->geocoding_address }}
