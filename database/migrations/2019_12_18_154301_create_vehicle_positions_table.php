@@ -17,6 +17,7 @@ class CreateVehiclePositionsTable extends Migration
             $table->bigIncrements('id');
             $table->decimal('latitude', 14, 10);
             $table->decimal('longitude', 14, 10);
+            $table->text('geocoding_address')->nullable();
             $table->integer('speed')->nullable();
             $table->integer('voltage')->nullable();
             $table->integer('distance')->nullable();

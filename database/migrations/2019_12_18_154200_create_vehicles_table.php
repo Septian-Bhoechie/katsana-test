@@ -15,10 +15,14 @@ class CreateVehiclesTable extends Migration
     {
         Schema::create('vehicles', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name', 50); //car name
             $table->integer('summary_max_speed')->nullable(); //knot
             $table->integer('summary_distance')->nullable(); //metes
             $table->integer('summary_violation')->nullable();
+            $table->timestamp('duration_from')->nullable();
+            $table->timestamp('duration_to')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
