@@ -1,5 +1,9 @@
 # Laravel Interview Test - By Septian Riza Saputra
 
+## How To Import Database table
+Please use this artisan command to generate database table
+<pre><code>php artisan migrate</code></pre>
+
 ## How To Generate Data
 To generate vehicle trips from json data we can use this command 
 <pre><code>php artisan generate:vehicle-trip</code></pre>
