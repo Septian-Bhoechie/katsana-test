@@ -21,7 +21,7 @@ class CreateVehiclePositionsTable extends Migration
             $table->integer('speed')->nullable();
             $table->integer('voltage')->nullable();
             $table->integer('distance')->nullable();
-            $table->timestamp("tracker_at")->nullable();
+            $table->timestamp("tracked_at")->nullable();
         });
     }
 

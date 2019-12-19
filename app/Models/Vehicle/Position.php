@@ -20,7 +20,7 @@ class Position extends Model
      * @var array
      */
     protected $fillable = [
-        'id', 'latitude', 'longitude', 'geocoding_address', 'speed', 'voltage', 'distance', 'tracker_at',
+        'id', 'latitude', 'longitude', 'geocoding_address', 'speed', 'voltage', 'distance', 'tracked_at',
     ];
 
     /**
