@@ -69,7 +69,6 @@ class GenerateVehicleTrip extends Command
         $this->info("created vehicle '{$vehicle->name}'");
 
         foreach ($vehicleTrips->first() as $vehicleTrip) {
-
             $start = Position::create([
                 "id" => $vehicleTrip->start->id,
                 "latitude" => $vehicleTrip->start->latitude,

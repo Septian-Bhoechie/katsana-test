@@ -28,6 +28,8 @@ class MakeFkToVehicleTripsTable extends Migration
     {
         Schema::table('vehicle_trips', function (Blueprint $table) {
             //
+            $table->dropForeign(['start_id']);
+            $table->dropForeign(['end_id']);
         });
     }
 }

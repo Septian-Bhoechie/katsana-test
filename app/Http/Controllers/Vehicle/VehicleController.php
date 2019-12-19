@@ -54,7 +54,7 @@ class VehicleController extends Controller
         foreach ($trip->histories as $position) {
             fputcsv($handle, [
                 $position->id,
-                $position->tracker_at,
+                $position->tracker_at->setTimezone('Asia/Kuala_Lumpur')->format("Y-m-d H:i:s"),
                 $position->latitude,
                 $position->longitude,
                 $position->speed_kmh,

@@ -36,10 +36,10 @@
                     {{ $vehicle->summary_violation }}
                 </td>
                 <td>
-                    {{ $vehicle->duration_from }}
+                    {{ $vehicle->duration_from->setTimezone('Asia/Kuala_Lumpur') }}
                 </td>
                 <td>
-                    {{ $vehicle->duration_to }}
+                    {{ $vehicle->duration_to->setTimezone('Asia/Kuala_Lumpur') }}
                 </td>
                 <td>
                     <a href="{{ route('vehicle.trip', $vehicle->id) }}">Trips Detail</a>
