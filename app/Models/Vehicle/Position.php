@@ -29,7 +29,7 @@ class Position extends Model
      * @var array
      */
     protected $dates = [
-        'tracker_at',
+        'tracked_at',
     ];
 
     /**
