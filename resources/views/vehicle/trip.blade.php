@@ -17,10 +17,10 @@
         @forelse ($data as $trip)
             <tr>
                 <td>
-                    {{ $trip->start->tracker_at->setTimezone('Asia/Kuala_Lumpur')->format('dS F, Y h:ia') }}
+                    {{ $trip->start->tracked_at->setTimezone('Asia/Kuala_Lumpur')->format('dS F, Y h:ia') }}
                 </td>
                 <td>
-                    {{ $trip->end->tracker_at->setTimezone('Asia/Kuala_Lumpur')->format('dS F, Y h:ia') }}
+                    {{ $trip->end->tracked_at->setTimezone('Asia/Kuala_Lumpur')->format('dS F, Y h:ia') }}
                 </td>
                 <td>
                     {{ $trip->end->geocoding_address }}
