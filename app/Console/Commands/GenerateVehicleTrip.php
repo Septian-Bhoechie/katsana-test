@@ -73,7 +73,7 @@ class GenerateVehicleTrip extends Command
                 "id" => $vehicleTrip->start->id,
                 "latitude" => $vehicleTrip->start->latitude,
                 "longitude" => $vehicleTrip->start->longitude,
-                "tracked_at" => strtotime($vehicleTrip->start->tracked_at),
+                "tracker_at" => strtotime($vehicleTrip->start->tracker_at),
             ]);
 
             $this->info("created start position '{$start->id}'");
@@ -99,7 +99,7 @@ class GenerateVehicleTrip extends Command
                 "id" => $vehicleTrip->end->id,
                 "latitude" => $vehicleTrip->end->latitude,
                 "longitude" => $vehicleTrip->end->longitude,
-                "tracked_at" => strtotime($vehicleTrip->end->tracked_at),
+                "tracker_at" => strtotime($vehicleTrip->end->tracker_at),
                 "geocoding_address" => $geocodingAddress,
             ]);
 
@@ -127,7 +127,7 @@ class GenerateVehicleTrip extends Command
                         "id" => $idlePosition->id,
                         "latitude" => $idlePosition->latitude,
                         "longitude" => $idlePosition->longitude,
-                        "tracked_at" => strtotime($idlePosition->tracked_at),
+                        "tracker_at" => strtotime($idlePosition->tracker_at),
                         'voltage' => $idlePosition->voltage,
                         'distance' => $idlePosition->distance,
                     ]);
@@ -135,7 +135,7 @@ class GenerateVehicleTrip extends Command
                     $idle->update([
                         "latitude" => $idlePosition->latitude,
                         "longitude" => $idlePosition->longitude,
-                        "tracked_at" => strtotime($idlePosition->tracked_at),
+                        "tracker_at" => strtotime($idlePosition->tracker_at),
                         'voltage' => $idlePosition->voltage,
                         'distance' => $idlePosition->distance,
                     ]);
@@ -154,7 +154,7 @@ class GenerateVehicleTrip extends Command
                         "id" => $historyPosition->id,
                         "latitude" => $historyPosition->latitude,
                         "longitude" => $historyPosition->longitude,
-                        "tracked_at" => strtotime($historyPosition->tracked_at),
+                        "tracker_at" => strtotime($historyPosition->tracker_at),
                         'speed' => $historyPosition->speed,
                         'voltage' => $historyPosition->voltage,
                         'distance' => $historyPosition->distance,
@@ -163,7 +163,7 @@ class GenerateVehicleTrip extends Command
                     $history->update([
                         "latitude" => $historyPosition->latitude,
                         "longitude" => $historyPosition->longitude,
-                        "tracked_at" => strtotime($historyPosition->tracked_at),
+                        "tracker_at" => strtotime($historyPosition->tracker_at),
                         'speed' => $historyPosition->speed,
                         'voltage' => $historyPosition->voltage,
                         'distance' => $historyPosition->distance,
